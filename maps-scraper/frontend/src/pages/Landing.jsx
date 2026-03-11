@@ -96,15 +96,6 @@ export default function Landing() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center max-w-3xl mx-auto"
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full text-blue-600 text-sm font-medium mb-6"
-            >
-              <Zap size={14} className="fill-current" />
-              Now with AI-powered extraction
-            </motion.div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
               Extract Google Maps Data{' '}
