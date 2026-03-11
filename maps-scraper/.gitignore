@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.local
+backend/.env
+
+# Backend binary
+backend/maps-scraper
+maps-scraper
+
+# Logs
+*.log
+backend.log
+frontend.log
+nohup.out
+
+# Node modules
+node_modules/
+
+# Database
+*.db
+
+# OS files
+.DS_Store

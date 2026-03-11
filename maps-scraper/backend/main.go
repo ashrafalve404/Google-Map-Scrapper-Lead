@@ -8,9 +8,13 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Load .env file
+	godotenv.Load()
+
 	db.Init()
 
 	r := gin.Default()
@@ -31,6 +35,10 @@ func main() {
 		api.GET("/search/:id/export", handlers.ExportCSV)
 		api.DELETE("/search/:id", handlers.DeleteSearch)
 		api.GET("/stats", handlers.GetStats)
+		// Payment routes
+		api.GET("/plans", handlers.GetPlans)
+		api.GET("/stripe/config", handlers.GetStripeConfig)
+		api.POST("/checkout", handlers.CreateCheckoutSession)
 	}
 
 	port := os.Getenv("PORT")
